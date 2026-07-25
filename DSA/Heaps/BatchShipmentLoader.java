@@ -1,10 +1,10 @@
 public class BatchShipmentLoader {
 
-    // Transforms an unsorted array into a Min-Heap in O(n) time
+    
     public static void buildHeap(int[] priorities) {
         int n = priorities.length;
 
-        // Start from the last non-leaf node and move backward to the root
+        
         for (int i = n / 2 - 1; i >= 0; i--) {
             siftDown(priorities, i, n);
         }
@@ -23,12 +23,11 @@ public class BatchShipmentLoader {
         }
 
         if (smallest != i) {
-            // Swap current node with smallest child
             int temp = arr[i];
             arr[i] = arr[smallest];
             arr[smallest] = temp;
 
-            // Recursively sift down the affected sub-tree
+           
             siftDown(arr, smallest, size);
         }
     }
